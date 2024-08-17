@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->foreignId('rubro_id')->nullable()->constrained('rubros')->onDelete('set null');
+            $table->foreignId('tipo_empresa_id')->nullable()->constrained('tipo_empresas')->onDelete('set null');
+
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();

@@ -15,6 +15,24 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('estrategias') }}" :active="request()->routeIs('estrategias')">
+                        {{ __('Estrategias') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('riesgos') }}" :active="request()->routeIs('riesgos')">
+                        {{ __('Riesgos') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('crm') }}" :active="request()->routeIs('crm')">
+                        {{ __('Gestión de clientes') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('rendimiento') }}" :active="request()->routeIs('rendimiento')">
+                        {{ __('Gestión del rendimiento') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('rse') }}" :active="request()->routeIs('rse')">
+                        {{ __('RSE') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('cmi') }}" :active="request()->routeIs('cmi')">
+                        {{ __('CMI') }}
+                    </x-nav-link>
                 </div>
             </div>
 

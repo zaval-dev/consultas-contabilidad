@@ -3,6 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Inicio') }}
         </h2>
+        <x-chat-g-p-t />
     </x-slot>
 
     <div class="py-12">
@@ -13,7 +14,7 @@
                     <h1 class="text-2xl font-medium text-gray-900 dark:text-white">
                         Especificaciones
                     </h1>
-                
+
                     {{-- <ul class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed space-y-4">
                         <li>La pantalla principal debe centrarse en la visualización de información clave con una navegación clara que permita acceder rápidamente a mapas, gráficos, y ejemplos relevantes para el rubro y tipo de empresa del usuario.</li>
                         <h3>Especificaciones (No definitivas aún):</h3>

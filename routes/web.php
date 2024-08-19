@@ -39,6 +39,9 @@ Route::middleware([
     Route::get('/cmi', function () {
         return view('pages.cmi');
     })->name('cmi');
+    Route::get('/first-welcome', function () {
+        return view('pages.configuracion-inicial');
+    })->name('configuracion-inicial');
 
     // Ruta para manejar la consulta a GPT
     Route::post('/ask-gpt', [ChatGPTController::class, 'askGPT'])->name('ask.gpt');

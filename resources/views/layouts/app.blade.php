@@ -7,9 +7,96 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+       <!-- Fonts -->
+       <link rel="preconnect" href="https://fonts.bunny.net">
+       <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+       <!-- Scripts -->
+       @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+       <style>
+           .probabilidad-impacto-table {
+               table-layout: fixed;
+               width: 100%;
+               background-color: #2d3748;
+           }
+
+           .probabilidad-impacto-table td {
+               padding: 1rem;
+               border: 1px solid #444;
+               text-align: center;
+           }
+
+           .probabilidad-impacto-table th {
+               padding: 0.5rem;
+               text-align: center;
+               font-weight: bold;
+               background-color: #2d3748;
+               color: #fff;
+           }
+
+           .low-risk {
+               background-color: #00ff00;
+           }
+
+           .moderate-risk {
+               background-color: #ffff00;
+           }
+
+           .high-risk {
+               background-color: #ffa500;
+           }
+
+           .very-high-risk {
+               background-color: #ff0000;
+           }
+   
+           .techniques-table {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-template-rows: repeat(2, 1fr);
+               width: 100%;
+               max-width: 200px;
+               margin: auto;
+               border-collapse: collapse;
+               border: 2px solid #444;
+           }
+   
+           .techniques-table div {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: bold;
+               border: 1px solid #444;
+               padding: 20px;
+               text-align: center;
+               font-size: 14px;
+           }
+   
+           .technique-accept {
+               background-color: #fafa6b;
+           }
+   
+           .technique-transfer {
+               background-color: #ffcc00;
+           }
+   
+           .technique-reduce {
+               background-color: #ff9933;
+           }
+   
+           .technique-avoid {
+               background-color: #ff3300;
+           }
+
+           .vertical-text {
+               writing-mode: vertical-rl;
+               text-orientation: mixed;
+           }
+   
+       </style>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

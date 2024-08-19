@@ -3,6 +3,14 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Inicio') }}
         </h2>
+        @if (session('success'))
+            <div id="successMessage" class="my-8 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative transition transform duration-500 ease-in-out" role="alert">
+                <span class="block ml-8 sm:inline">{{ session('success') }}</span>
+                <span class="absolute top-0 bottom-0 left-0 px-4 py-3">
+                    <i class="fa-solid fa-circle-info"></i>
+                </span>
+            </div>            
+        @endif
         <x-chat-g-p-t />
     </x-slot>
 
@@ -12,7 +20,7 @@
                 {{-- <x-welcome /> --}}
                 <div class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
                     <h1 class="text-2xl font-medium text-gray-900 dark:text-white">
-                        Especificaciones
+                        Aqui iran cards que redirijan a las secciones del navbar
                     </h1>
 
                     {{-- <ul class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed space-y-4">
@@ -27,7 +35,7 @@
                         </ul>
                     </ul> --}}
                     {{-- <h2>Especificaciones de la Aplicación</h2> --}}
-                    <ol class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed space-y-4">
+                    {{-- <ol class="mt-6 text-gray-500 dark:text-gray-400 leading-relaxed space-y-4">
                     <li>
                         <h3>Estructura General de la Aplicación</h3>
                         <ol>
@@ -97,9 +105,28 @@
                             </li>
                         </ol>
                     </li>
-                    </ol>
+                    </ol> --}}
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Encuentra el div del mensaje
+            const successMessage = document.getElementById('successMessage');
+            
+            if (successMessage) {
+                // Espera 5 segundos (5000 milisegundos) y luego aplica la animación
+                setTimeout(() => {
+                    successMessage.classList.add('opacity-0', '-translate-y-5');
+                    
+                    // Espera a que termine la animación para eliminar el div del DOM
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 500); // La duración de la animación debe coincidir con la clase 'duration-500'
+                    
+                }, 5000);
+            }
+        });
+    </script>
 </x-app-layout>

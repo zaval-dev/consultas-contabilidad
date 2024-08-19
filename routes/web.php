@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatGPTController;
+use App\Http\Controllers\DashboardController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
+use function Ramsey\Uuid\v1;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,9 +17,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    
+    Route::post('/establece-rubro/{rubro}', [DashboardController::class, 'updateRubro'])->name('establecerRubro');
 
     Route::get('/estrategias', function () {
         return view('pages.estrategias');

@@ -76,7 +76,8 @@
            }
    
            .technique-accept {
-               background-color: #fafa6b;
+               background-color: #fff;
+               color: #000;
            }
    
            .technique-transfer {

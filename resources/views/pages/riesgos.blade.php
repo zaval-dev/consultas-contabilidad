@@ -204,7 +204,7 @@
                                         <td class="text-xs bg-gray-700 text-white">Baja <span class="text-transparent">span</span></td>
                                         <td class="low-risk"></td>
                                         <td class="moderate-risk"></td>
-                                        <td class="moderate-risk"></td>
+                                        <td class="moderate-risk font-bold text-3xl">R</td>
                                         <td class="high-risk"></td>
                                         <td class="very-high-risk"></td>
                                     </tr>
@@ -225,10 +225,10 @@
                             <div class="bg-gray-800 p-6 rounded-lg shadow-md">
                                 <h4 class="text-lg font-semibold mb-4">Tabla de Técnicas de Administración del Riesgo</h4>
                                 <div class="techniques-table">
-                                    <div class="technique-accept">ACEPTAR</div>
-                                    <div class="technique-transfer">TRANSFERIR</div>
                                     <div class="technique-reduce">REDUCIR</div>
                                     <div class="technique-avoid">EVITAR</div>
+                                    <div class="technique-accept">ACEPTAR</div>
+                                    <div class="technique-transfer">TRANSFERIR</div>
                                 </div>
                             </div>
                         </div>

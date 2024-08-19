@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatGPTController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,4 +39,7 @@ Route::middleware([
     Route::get('/cmi', function () {
         return view('pages.cmi');
     })->name('cmi');
+
+    // Ruta para manejar la consulta a GPT
+    Route::post('/ask-gpt', [ChatGPTController::class, 'askGPT'])->name('ask.gpt');
 });

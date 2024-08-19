@@ -13,7 +13,7 @@
             <textarea id="query" rows="3" class="block w-full resize-none border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 text-sm placeholder-gray-400 text-gray-900 sm:text-sm sm:leading-6" placeholder="Escribe tu consulta..."></textarea>
 
             <div class="flex justify-end">
-                <button class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                <button id="send-btn" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600">
                     Enviar
                 </button>
             </div>
@@ -33,18 +33,21 @@
         document.getElementById('compose-modal').classList.add('hidden');
     });
 
-    // Recargar el estado previo
-    window.addEventListener('load', function() {
-        if (localStorage.getItem('modalVisible') === 'true') {
-            document.getElementById('compose-modal').classList.remove('hidden');
-        }
+    document.getElementById('send-btn').addEventListener('click', function() {
+        let query = document.getElementById('query').value;
 
-        document.getElementById('query').value = localStorage.getItem('query') || '';
-    });
-
-    // Guardar el estado del modal y contenido
-    window.addEventListener('beforeunload', function() {
-        localStorage.setItem('modalVisible', !document.getElementById('compose-modal').classList.contains('hidden'));
-        localStorage.setItem('query', document.getElementById('query').value);
+        fetch('{{ route('ask.gpt') }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({ query: query })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('response').value = data.response;
+        })
+        .catch(error => console.error('Error:', error));
     });
 </script>

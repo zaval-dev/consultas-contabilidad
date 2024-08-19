@@ -12,9 +12,6 @@ class ChatGPT extends Component
      * Create a new component instance.
      */
 
-    public $askText;
-    public $response;
-
     public function __construct()
     {
         //

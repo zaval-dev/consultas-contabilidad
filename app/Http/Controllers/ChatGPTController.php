@@ -22,14 +22,23 @@ class ChatGPTController extends Controller
     public function askGPT(Request $request)
     {
         try {
+            $rubro = $request->input('rubro');
+            $tema = $request->input('tema');
             $query = $request->input('query');
 
-            Log::info('Consulta recibida: ' . $query);
+            $gptQuery = '';
+
+            if ($rubro && $tema)
+                $gptQuery = "Estoy trabajando en el rubro de $rubro y necesito orientación sobre el tema $tema. ¿Puedes ayudarme (Un tip y ejemplo práctico)?";
+            else 
+                $gptQuery = $query;
+
+            Log::info('Consulta construida: ' . $gptQuery);
 
             $response = $this->client->chat()->create([
                 'model' => 'gpt-3.5-turbo',
                 'messages' => [
-                    ['role' => 'user', 'content' => $query],
+                    ['role' => 'user', 'content' => $gptQuery],
                 ],
             ]);
 

@@ -5,11 +5,11 @@
 
     <div id="compose-modal" class="hidden fixed bottom-0 right-0 bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-1/3 h-auto mr-4 mb-4">
         <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold">Ask GPT</h3>
+            <h3 class="text-lg font-semibold">Pregunta a Arnie</h3>
             <button id="close-modal" class="text-gray-500 hover:text-gray-700">&times;</button>
         </div>
         <div class="mt-4 space-y-4">
-            <label for="query" class="sr-only">Ask GPT</label>
+            <label for="query" class="sr-only">Pregunta a Arnie</label>
             <textarea id="query" rows="3" class="block w-full resize-none border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 text-sm placeholder-gray-400 text-gray-900 sm:text-sm sm:leading-6" placeholder="Escribe tu consulta..."></textarea>
 
             <div class="flex justify-end">

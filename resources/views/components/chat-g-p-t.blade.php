@@ -3,7 +3,7 @@
         <i class="fa-solid fa-clipboard-question mr-2"></i>Realizar Consulta
     </button>
 
-    <div id="compose-modal" class="transform transition-all duration-500 fixed z-50 bottom-0 right-0 translate-y-full bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-1/3 h-auto mr-4 dark:bg-gray-800 dark:border-gray-600 dark:shadow-gray-700">
+    <div id="compose-modal" class="transform transition-all duration-500 fixed z-50 bottom-0 right-0 translate-y-full bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-4/5 md:w-1/2 xl:w-1/3 h-auto mr-4 dark:bg-gray-800 dark:border-gray-600 dark:shadow-gray-700">
         {{-- mr-4 mb-4 --}}
         <div class="flex justify-between items-center"> 
             <h3 class="text-lg font-semibold dark:text-white">Conoce a tu asistente, Arnie</h3>
@@ -19,10 +19,10 @@
                 </label>
             </div>
             <div class="space-y-4">
-                <div id="query-options" class="flex justify-around items-center">
+                <div id="query-options" class="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <div class="space-y-1">
                         <label for="rubro" class="block text-sm dark:text-gray-200">Rubro</label>
-                        <select name="rubro" id="rubro-select" class="text-sm rounded-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:focus:ring-indigo-500 border-3 focus:ring-indigo-600" required>
+                        <select name="rubro" id="rubro-select" class="w-full text-sm rounded-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:focus:ring-indigo-500 border-3 focus:ring-indigo-600" required>
                             @php
                                 $rubros = App\Models\Rubro::all();
                                 $user = Auth::user();
@@ -36,7 +36,7 @@
                     </div>
                     <div class="space-y-1">
                         <label for="tema" class="block text-sm dark:text-gray-200">Tema</label>
-                        <select name="tema" id="tema-select" class="text-sm rounded-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:focus:ring-indigo-500 border-3 focus:ring-indigo-600" required>
+                        <select name="tema" id="tema-select" class="w-full text-sm rounded-full border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:focus:ring-indigo-500 border-3 focus:ring-indigo-600" required>
                             <option value="" hidden>Selecciona un tema</option>
                             <option value="Estrategias de empresa">Estrategias</option>
                             <option value="Gestión de Riesgos">Riesgos</option>
@@ -50,11 +50,12 @@
                 <textarea id="query" rows="3" class="hidden w-full resize-none border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 placeholder-gray-400 text-gray-900 sm:leading-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-200" placeholder="Escribe tu consulta..."></textarea>
     
                 <div class="flex justify-end">
-                    <button id="send-btn" class="inline-flex items-center rounded-md bg-indigo-600 dark:bg-indigo-500 px-3 py-2 font-semibold text-white shadow-sm hover:bg-indigo-500 dark:hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-500">
+                    <button id="send-btn"
+                        class="inline-flex items-center rounded-md bg-indigo-600 dark:bg-indigo-500 px-3 py-2 font-semibold text-white shadow-sm hover:bg-indigo-500 dark:hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-500">
                         Enviar
                     </button>
                 </div>
-    
+
                 <label for="response" class="sr-only">GPT Response</label>
                 <textarea id="response" rows="10" class="block w-full resize-none border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600  text-gray-900 sm:leading-6 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:placeholder-gray-400" readonly placeholder="La respuesta aparecerá aquí..."></textarea>
             </div>            

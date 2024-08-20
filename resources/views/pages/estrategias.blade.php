@@ -58,7 +58,7 @@
                         <div class="absolute inset-0 backdrop-blur-lg bg-opacity-50"></div>
                         <!-- Aplica el desenfoque al fondo -->
                         <div
-                            class="relative bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-600 max-w-md mx-auto text-white transform transition-transform duration-300 scale-95 opacity-0">
+                            class="relative inset-0 bg-gray-800 top-1/2 -translate-y-1/2 p-8 rounded-lg shadow-2xl border border-gray-600 max-w-md mx-auto my-auto text-white transform transition-transform duration-500 scale-95 opacity-0">
                             <!-- Botón de Cerrar (X) -->
                             <button class="absolute top-2 right-2 text-white text-2xl"
                                 onclick="closeModal('modal-entrada')">&times;</button>
@@ -80,7 +80,7 @@
                         <div class="absolute inset-0 backdrop-blur-lg bg-opacity-50"></div>
                         <!-- Aplica el desenfoque al fondo -->
                         <div
-                            class="relative bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-600 max-w-md mx-auto text-white transform transition-transform duration-300 scale-95 opacity-0">
+                            class="relative bg-gray-800 top-1/2 -translate-y-1/2 p-8 rounded-lg shadow-2xl border border-gray-600 max-w-md mx-auto text-white transform transition-transform duration-500 scale-95 opacity-0">
                             <!-- Botón de Cerrar (X) -->
                             <button class="absolute top-2 right-2 text-white text-2xl"
                                 onclick="closeModal('modal-emparejamiento')">&times;</button>
@@ -104,7 +104,7 @@
                         <div class="absolute inset-0 backdrop-blur-lg bg-opacity-50"></div>
                         <!-- Aplica el desenfoque al fondo -->
                         <div
-                            class="relative bg-gray-800 p-8 rounded-lg shadow-2xl border border-gray-600 max-w-md mx-auto text-white transform transition-transform duration-300 scale-95 opacity-0">
+                            class="relative bg-gray-800 top-1/2 -translate-y-1/2 p-8 rounded-lg shadow-2xl border border-gray-600 max-w-md mx-auto text-white transform transition-transform duration-500 scale-95 opacity-0">
                             <!-- Botón de Cerrar (X) -->
                             <button class="absolute top-2 right-2 text-white text-2xl"
                                 onclick="closeModal('modal-salida')">&times;</button>
@@ -223,11 +223,11 @@
             <!-- Modal para mostrar la imagen -->
             <div id="imageModal"
                 class="fixed inset-0 hidden z-50  items-center justify-center bg-black bg-opacity-75">
-                <div class="relative bg-white p-4 rounded-lg shadow-lg">
+                <div class="max-w-lg relative bg-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 p-4 rounded-lg shadow-lg">
                     <button class="absolute top-2 right-2 text-black text-2xl"
                         onclick="closeImageModal()">&times;</button>
                     <img id="modalImage" src="" alt="Imagen ampliada"
-                        class="rounded-lg shadow-md max-w-full h-auto">
+                        class="rounded-lg shadow-md max-w-full h-auto mx-auto">
                 </div>
             </div>
 

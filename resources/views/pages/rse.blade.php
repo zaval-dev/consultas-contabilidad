@@ -6,170 +6,207 @@
         <x-chat-g-p-t />
     </x-slot>
 
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hover-bg-custom:hover {
+            background-color: #6875f5;
+        }
+
+        .card:hover i {
+            color: white;
+        }
+
+        .card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+    </style>
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-gray-800 dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 <div
                     class="p-6 lg:p-8 bg-gray-800 dark:bg-gray-800 dark:via-transparent border-b border-gray-200 dark:border-gray-700 text-white">
 
-
-
-                    <!-- Mapa Estratégico -->
-                    <section id="mapa-estrategico" class="my-8">
-                        <h2 class="text-3xl font-bold mb-4">DEFINICIÓN</h2>
-                        <div class="bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <h3 class="text-xl font-semibold mb-4">DEFINICIÓN</h3>
-                            <p class="mb-4">
-                                Es la practica voluntaria de las empresas que
-                                refleja el cómo estas se hacen responsables del
-                                impacto económico, social y ambiental que tienen
-                                en la sociedad, con el fin de apoyar el desarrollo
-                                sostenible.
-
-                            </p>
-                        </div>
-
-                        <div class="bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <h3 class="text-xl font-semibold mb-4">Objetivos de la Responsabilidad Social Empresarial
-                            </h3>
-                            <ul class="list-disc list-inside">
-                                <li class="mb-2">**Contribuir al desarrollo sostenible**: Equilibrar la sostenibilidad
-                                    con la productividad, asegurando que las operaciones no dañen el medio ambiente y
-                                    promoviendo el desarrollo social y económico de las comunidades locales.</li>
-                                <li class="mb-2">**Mejorar la imagen de la empresa**: Realizar prácticas éticas y
-                                    transparentes, como el respeto a los derechos humanos y laborales, mejorando la
-                                    imagen ante la sociedad.</li>
-                                <li class="mb-2">**Aumentar la competitividad**: Mejorar la eficiencia, reducir
-                                    costos, y aumentar la innovación y creatividad en la empresa.</li>
-                                <li class="mb-2">**Mejorar el clima laboral**: Promover la equidad, la igualdad de
-                                    oportunidades y el respeto a los derechos de los trabajadores, contribuyendo a la
-                                    motivación, productividad y satisfacción de los empleados.</li>
-                            </ul>
+                    <section id="rse" class="my-8">
+                        <div class="bg-gray-800 shadow-md rounded p-6 mb-8 animate-fadeInUp">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Título y Texto de la definición -->
+                                <div class="flex flex-col justify-center">
+                                    <h1 class="text-4xl font-bold mb-4 self-start">Responsabilidad Social Empresarial
+                                    </h1>
+                                    <p>
+                                        Es la práctica voluntaria de las empresas que refleja cómo estas se hacen
+                                        responsables del impacto económico, social y ambiental que tienen en la
+                                        sociedad, con el fin de apoyar el desarrollo sostenible.
+                                    </p>
+                                </div>
+                                <!-- Imagen al lado del texto -->
+                                <div>
+                                    <img src="/img/rse-img.png" alt="Responsabilidad Social Empresarial"
+                                        class="w-3/4 mx-auto rounded-lg shadow-md">
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    <!-- Tipos de Responsabilidad Social Empresarial -->
+                    <br>
+
                     <section id="tipos-rse" class="my-8">
-                        <h2 class="text-3xl font-bold mb-4">Tipos de Responsabilidad Social Empresarial</h2>
-                        <div class="bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <h3 class="text-xl font-semibold mb-4">Responsabilidad Social Corporativa Interna</h3>
-                            <ul class="list-disc list-inside">
-                                <li class="mb-2">**Condiciones Laborales**: Garantizar un entorno de trabajo seguro y
-                                    saludable.</li>
-                                <li class="mb-2">**Desarrollo Profesional**: Invertir en la capacitación y desarrollo
-                                    profesional de los empleados.</li>
-                                <li class="mb-2">**Salud y Bienestar**: Implementar programas para mejorar la calidad
-                                    de vida de los empleados.</li>
-                            </ul>
-                        </div>
+                        <h2 class="text-3xl font-bold mb-4 animate-fadeInUp">Tipos de Responsabilidad Social Empresarial
+                        </h2>
 
-                        <div class="bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <h3 class="text-xl font-semibold mb-4">Responsabilidad Social Corporativa Externa</h3>
-                            <ul class="list-disc list-inside">
-                                <li class="mb-2">**Responsabilidad Ambiental**: Implementar prácticas sostenibles para
-                                    reducir la huella de carbono.</li>
-                                <li class="mb-2">**Compromiso Comunitario**: Participar en el desarrollo de la
-                                    comunidad local.</li>
-                                <li class="mb-2">**Prácticas de Negocios Éticas**: Adoptar estándares éticos en todas
-                                    las operaciones comerciales.</li>
-                            </ul>
-                        </div>
+                        <!-- Cards Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                        <!-- Responsabilidad Económica -->
-                        <div class="flex flex-col md:flex-row bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <div class="md:w-1/3 flex items-center justify-center mb-4 md:mb-0">
-                                <img src="/img/economica.png" alt="Responsabilidad Económica"
-                                    class="rounded-lg shadow-md">
+                            <!-- Responsabilidad Social Corporativa Interna -->
+                            <div
+                                class="card bg-gray-800 p-6 rounded-lg shadow-md transition-transform duration-500 hover-bg-custom">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-building text-yellow-400 text-2xl mr-4"></i>
+                                    <h4 class="text-xl font-semibold text-white">Responsabilidad Interna</h4>
+                                </div>
+                                <p class="text-gray-300">Garantizar un entorno de trabajo seguro, desarrollo profesional
+                                    y bienestar de los empleados.</p>
                             </div>
-                            <div class="md:w-2/3">
-                                <h3 class="text-xl font-semibold mb-4">Responsabilidad Económica</h3>
-                                <ul class="list-disc list-inside">
-                                    <li class="mb-2">**Sostenibilidad Financiera**: Garantizar la viabilidad económica
-                                        a largo plazo de la empresa, creando valor para los accionistas y contribuyendo
-                                        al bienestar económico de la sociedad.</li>
-                                    <li class="mb-2">**Inversiones Responsables**: Invertir en proyectos que generen
-                                        beneficios económicos y sociales, como energías renovables y tecnologías verdes.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <!-- Responsabilidad Cultural -->
-                        <div class="flex flex-col md:flex-row bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <div class="md:w-1/3 flex items-center justify-center mb-4 md:mb-0">
-                                <img src="/img/cultural.png" alt="Responsabilidad Cultural"
-                                    class="rounded-lg shadow-md">
+                            <!-- Responsabilidad Social Corporativa Externa -->
+                            <div
+                                class="card bg-gray-800 p-6 rounded-lg shadow-md transition-transform duration-500 hover-bg-custom">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-leaf text-green-400 text-2xl mr-4"></i>
+                                    <h4 class="text-xl font-semibold text-white">Responsabilidad Externa</h4>
+                                </div>
+                                <p class="text-gray-300">Implementar prácticas sostenibles, compromiso comunitario y
+                                    prácticas éticas de negocios.</p>
                             </div>
-                            <div class="md:w-2/3">
-                                <h3 class="text-xl font-semibold mb-4">Responsabilidad Cultural</h3>
-                                <ul class="list-disc list-inside">
-                                    <li class="mb-2">**Preservación Cultural**: Apoyar y promover la conservación del
-                                        patrimonio cultural y las tradiciones locales.</li>
-                                    <li class="mb-2">**Educación y Cultura**: Financiar proyectos educativos y
-                                        culturales que beneficien a la comunidad y promuevan el desarrollo intelectual y
-                                        artístico.</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <!-- Responsabilidad con los Clientes -->
-                        <div class="flex flex-col md:flex-row bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <div class="md:w-1/3 flex items-center justify-center mb-4 md:mb-0">
-                                <img src="/img/clientes.png" alt="Responsabilidad con los Clientes"
-                                    class="rounded-lg shadow-md">
+                            <!-- Responsabilidad Económica -->
+                            <div
+                                class="card bg-gray-800 p-6 rounded-lg shadow-md transition-transform duration-500 hover-bg-custom">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-chart-line text-red-400 text-2xl mr-4"></i>
+                                    <h4 class="text-xl font-semibold text-white">Responsabilidad Económica</h4>
+                                </div>
+                                <p class="text-gray-300">Garantizar sostenibilidad financiera y realizar inversiones
+                                    responsables.</p>
                             </div>
-                            <div class="md:w-2/3">
-                                <h3 class="text-xl font-semibold mb-4">Responsabilidad con los Clientes</h3>
-                                <ul class="list-disc list-inside">
-                                    <li class="mb-2">**Calidad y Seguridad del Producto**: Asegurar que los productos
-                                        y servicios ofrecidos sean seguros, de alta calidad y cumplan con las normativas
-                                        vigentes.</li>
-                                    <li class="mb-2">**Satisfacción del Cliente**: Implementar políticas y prácticas
-                                        para garantizar la satisfacción del cliente y la resolución de sus quejas y
-                                        sugerencias.</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <!-- Responsabilidad Filantrópica -->
-                        <div class="flex flex-col md:flex-row bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <div class="md:w-1/3 flex items-center justify-center mb-4 md:mb-0">
-                                <img src="/img/filantropica.png" alt="Responsabilidad Filantrópica"
-                                    class="rounded-lg shadow-md">
+                            <!-- Responsabilidad Cultural -->
+                            <div
+                                class="card bg-gray-800 p-6 rounded-lg shadow-md transition-transform duration-500 hover-bg-custom">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-globe text-blue-400 text-2xl mr-4"></i>
+                                    <h4 class="text-xl font-semibold text-white">Responsabilidad Cultural</h4>
+                                </div>
+                                <p class="text-gray-300">Promover la preservación cultural, educación y desarrollo
+                                    artístico en la comunidad.</p>
                             </div>
-                            <div class="md:w-2/3">
-                                <h3 class="text-xl font-semibold mb-4">Responsabilidad Filantrópica</h3>
-                                <ul class="list-disc list-inside">
-                                    <li class="mb-2">**Donaciones y Patrocinios**: Realizar contribuciones financieras
-                                        a causas benéficas y organizaciones sin fines de lucro.</li>
-                                    <li class="mb-2">**Voluntariado Corporativo**: Fomentar la participación de los
-                                        empleados en actividades de voluntariado durante su tiempo libre o como parte de
-                                        sus funciones laborales.</li>
-                                </ul>
+
+                            <!-- Responsabilidad con los Clientes -->
+                            <div
+                                class="card bg-gray-800 p-6 rounded-lg shadow-md transition-transform duration-500 hover-bg-custom">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-users text-purple-400 text-2xl mr-4"></i>
+                                    <h4 class="text-xl font-semibold text-white">Responsabilidad con los Clientes</h4>
+                                </div>
+                                <p class="text-gray-300">Garantizar calidad y seguridad en los productos y servicios,
+                                    así como la satisfacción del cliente.</p>
                             </div>
+
+                            <!-- Responsabilidad Filantrópica -->
+                            <div
+                                class="card bg-gray-800 p-6 rounded-lg shadow-md transition-transform duration-500 hover-bg-custom">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-hands-helping text-pink-400 text-2xl mr-4"></i>
+                                    <h4 class="text-xl font-semibold text-white">Responsabilidad Filantrópica</h4>
+                                </div>
+                                <p class="text-gray-300">Realizar donaciones y patrocinios, y fomentar el voluntariado
+                                    corporativo.</p>
+                            </div>
+
                         </div>
                     </section>
+
+                    <br>
 
                     <!-- Beneficios de la RSE -->
                     <section id="beneficios-rse" class="my-8">
-                        <h2 class="text-3xl font-bold mb-4">Beneficios de la Responsabilidad Social Empresarial (RSE)
-                        </h2>
-                        <div class="bg-gray-800 shadow-md rounded p-6 mb-8">
-                            <ul class="list-disc list-inside">
-                                <li class="mb-2">**Contribuye al desarrollo sostenible**: Disminuye el impacto
-                                    ambiental negativo, beneficiando a futuras generaciones.</li>
-                                <li class="mb-2">**Mejora la reputación y la imagen de la empresa**: Fortalece las
-                                    relaciones con grupos de interés.</li>
-                                <li class="mb-2">**Fomenta la lealtad de los clientes**: Los clientes prefieren marcas
-                                    con impacto social y ambiental positivo.</li>
-                                <li class="mb-2">**Aumenta la motivación y la satisfacción de los empleados**: Los
-                                    empleados se sienten más orgullosos y motivados cuando la empresa tiene un impacto
-                                    positivo.</li>
-                                <li class="mb-2">**Genera eficiencia y ahorros**: Reduce el uso de recursos, energía,
-                                    y costos operativos, aumentando la rentabilidad.</li>
+                        <h2 class="text-3xl font-bold mb-6 text-white animate-fadeInUp">Beneficios de la Responsabilidad
+                            Social
+                            Empresarial (RSE)</h2>
+                        <div class="bg-gray-900 shadow-lg rounded-lg p-8 mb-12 border border-gray-700 animate-fadeInUp">
+                            <ul class="space-y-4 text-lg text-gray-300">
+                                <li class="flex items-start space-x-4">
+                                    <i class="fas fa-seedling text-green-400 text-2xl mt-1"></i>
+                                    <span><strong class="text-white">Contribuye al desarrollo sostenible:</strong>
+                                        Disminuye el impacto ambiental negativo, beneficiando a futuras
+                                        generaciones.</span>
+                                </li>
+                                <li class="flex items-start space-x-4">
+                                    <i class="fas fa-award text-yellow-400 text-2xl mt-1"></i>
+                                    <span><strong class="text-white">Mejora la reputación y la imagen de la
+                                            empresa:</strong> Fortalece las relaciones con grupos de interés.</span>
+                                </li>
+                                <li class="flex items-start space-x-4">
+                                    <i class="fas fa-hand-holding-heart text-red-400 text-2xl mt-1"></i>
+                                    <span><strong class="text-white">Fomenta la lealtad de los clientes:</strong> Los
+                                        clientes prefieren marcas con impacto social y ambiental positivo.</span>
+                                </li>
+                                <li class="flex items-start space-x-4">
+                                    <i class="fas fa-smile text-blue-400 text-2xl mt-1"></i>
+                                    <span><strong class="text-white">Aumenta la motivación y la satisfacción de los
+                                            empleados:</strong> Los empleados se sienten más orgullosos y motivados
+                                        cuando la empresa tiene un impacto positivo.</span>
+                                </li>
+                                <li class="flex items-start space-x-4">
+                                    <i class="fas fa-piggy-bank text-pink-400 text-2xl mt-1"></i>
+                                    <span><strong class="text-white">Genera eficiencia y ahorros:</strong> Reduce el uso
+                                        de recursos, energía, y costos operativos, aumentando la rentabilidad.</span>
+                                </li>
                             </ul>
                         </div>
                     </section>
+
 
                 </div>
             </div>

@@ -59,7 +59,7 @@
     </div>
 </div> --}}
 <div>
-    <button id="compose-btn" class="bg-blue-500 text-white font-bold py-2 px-4 rounded fixed bottom-4 right-4 shadow-lg transition-all duration-300 hover:bg-blue-800 hover:-translate-y-1 dark:bg-blue-700 dark:hover:bg-blue-900">
+    <button id="compose-btn" class="z-50 bg-blue-500 text-white font-bold py-2 px-4 rounded fixed bottom-4 right-4 shadow-lg transition-all duration-300 hover:bg-blue-800 hover:-translate-y-1 dark:bg-blue-700 dark:hover:bg-blue-900">
         <i class="fa-solid fa-clipboard-question mr-2"></i>Realizar Consulta
     </button>
 

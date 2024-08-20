@@ -126,18 +126,6 @@
                                 </p>
                             </div>
                         </div>
-
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4">Imágenes Referenciales</h3>
-                            <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <img src="https://via.placeholder.com/300x200" alt="Mapa Estratégico Ejemplo 1"
-                                    class="rounded-lg shadow-md mx-auto">
-                                <img src="https://via.placeholder.com/300x200" alt="Mapa Estratégico Ejemplo 2"
-                                    class="rounded-lg shadow-md mx-auto">
-                                <img src="https://via.placeholder.com/300x200" alt="Mapa Estratégico Ejemplo 3"
-                                    class="rounded-lg shadow-md mx-auto">
-                            </div>
-                        </div>
                     </section>
 
                     <!-- Perspectiva Financiera -->
@@ -194,18 +182,6 @@
                                     <h4 class="text-lg font-semibold">Flujo de Caja</h4>
                                 </div>
                                 <p class="text-gray-300">Indicador Clave (KPI): +15% - Mejora en el flujo de caja.</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4">Imágenes Referenciales</h3>
-                            <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico Financiero Ejemplo 1"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico Financiero Ejemplo 2"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico Financiero Ejemplo 3"
-                                    class="mx-auto rounded-lg shadow-md">
                             </div>
                         </div>
                     </section>
@@ -266,18 +242,6 @@
                                     Contacto.</p>
                             </div>
                         </div>
-
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4">Imágenes Referenciales</h3>
-                            <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Clientes Ejemplo 1"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Clientes Ejemplo 2"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Clientes Ejemplo 3"
-                                    class="mx-auto rounded-lg shadow-md">
-                            </div>
-                        </div>
                     </section>
 
                     <!-- Perspectiva de Procesos Internos -->
@@ -334,18 +298,6 @@
                                     <h4 class="text-lg font-semibold">Innovación en Procesos</h4>
                                 </div>
                                 <p class="text-gray-300">Indicador Clave (KPI): +5% en inversión I+D.</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4">Imágenes Referenciales</h3>
-                            <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Procesos Ejemplo 1"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Procesos Ejemplo 2"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Procesos Ejemplo 3"
-                                    class="mx-auto rounded-lg shadow-md">
                             </div>
                         </div>
                     </section>
@@ -407,18 +359,6 @@
                                 </div>
                                 <p class="text-gray-300">Indicador Clave (KPI): +5% en participación en encuestas de
                                     clima laboral.</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-8">
-                            <h3 class="text-xl font-semibold mb-4">Imágenes Referenciales</h3>
-                            <div class="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Aprendizaje Ejemplo 1"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Aprendizaje Ejemplo 2"
-                                    class="mx-auto rounded-lg shadow-md">
-                                <img src="https://via.placeholder.com/300x200" alt="Gráfico de Aprendizaje Ejemplo 3"
-                                    class="mx-auto rounded-lg shadow-md">
                             </div>
                         </div>
                     </section>

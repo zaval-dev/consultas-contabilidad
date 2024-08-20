@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
-            $table->string('detalle')->unique();
+            $table->string('detalle', 191)->unique();
             $table->timestamps();
         });
     }

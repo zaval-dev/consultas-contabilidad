@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rubros', function (Blueprint $table) {
-            $table->id();
-            $table->string('detalle')->unique();
+            $table->bigIncrements('id'); // Asegúrate de que hay columnas definidas aquí
+            $table->string('detalle', 191)->unique();
             $table->timestamps();
         });
     }

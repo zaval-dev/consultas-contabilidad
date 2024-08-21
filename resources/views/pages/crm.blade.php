@@ -6,9 +6,25 @@
         <x-chat-g-p-t />
     </x-slot>
 
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
 
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    <div class="py-12">
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+
+    <div class="py-12 animate-fadeInUp">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-gray-800 dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 <div

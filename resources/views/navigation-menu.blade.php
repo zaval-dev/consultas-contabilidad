@@ -161,6 +161,36 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
+        <div class="pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('estrategias') }}" :active="request()->routeIs('estrategias')">
+                {{ __('Estrategias') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('riesgos') }}" :active="request()->routeIs('riesgos')">
+                {{ __('Riesgos') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('crm') }}" :active="request()->routeIs('crm')">
+                {{ __('Gestión de clientes') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('rendimiento') }}" :active="request()->routeIs('rendimiento')">
+                {{ __('Gestión del rendimiento') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('rse') }}" :active="request()->routeIs('rse')">
+                {{ __('RSE') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('cmi') }}" :active="request()->routeIs('cmi')">
+                {{ __('CMI') }}
+            </x-responsive-nav-link>
+        </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">

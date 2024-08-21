@@ -6,7 +6,51 @@
         <x-chat-g-p-t />
     </x-slot>
 
-    <div class="py-12">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 1s;
+        }
+    </style>
+
+
+    <div class="py-12 animate-fadeInUp">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
                 <div
@@ -29,7 +73,8 @@
                     <section id="tipos-riesgos" class="my-8">
                         <h3 class="text-2xl font-semibold mb-4">Tipos de Riesgos</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-slate-700 p-6 rounded-lg shadow-md">
+
+                            <div class="card bg-slate-700 p-6 rounded-lg shadow-md">
                                 <div class="flex items-center mb-4">
                                     <i class="fas fa-coins text-yellow-400 text-2xl mr-4"></i>
                                     <h4 class="text-lg font-semibold">Riesgo Financiero</h4>
@@ -37,7 +82,8 @@
                                 <p class="text-gray-300">Pérdidas financieras debido a factores internos y externos que
                                     afectan la capacidad de la empresa para cumplir sus obligaciones.</p>
                             </div>
-                            <div class="bg-slate-700 p-6 rounded-lg shadow-md">
+
+                            <div class="card bg-slate-700 p-6 rounded-lg shadow-md">
                                 <div class="flex items-center mb-4">
                                     <i class="fas fa-cogs text-blue-400 text-2xl mr-4"></i>
                                     <h4 class="text-lg font-semibold">Riesgo Operacional</h4>
@@ -45,7 +91,8 @@
                                 <p class="text-gray-300">Fallos en procesos internos, sistemas, personas o eventos
                                     externos, como errores humanos o fallos en sistemas informáticos.</p>
                             </div>
-                            <div class="bg-slate-700 p-6 rounded-lg shadow-md">
+
+                            <div class="card bg-slate-700 p-6 rounded-lg shadow-md">
                                 <div class="flex items-center mb-4">
                                     <i class="fas fa-balance-scale text-red-400 text-2xl mr-4"></i>
                                     <h4 class="text-lg font-semibold">Riesgo de Cumplimiento</h4>
@@ -53,7 +100,8 @@
                                 <p class="text-gray-300">Incumplimiento de leyes y regulaciones, que puede resultar en
                                     sanciones legales.</p>
                             </div>
-                            <div class="bg-slate-700 p-6 rounded-lg shadow-md">
+
+                            <div class="card bg-slate-700 p-6 rounded-lg shadow-md">
                                 <div class="flex items-center mb-4">
                                     <i class="fas fa-chess text-purple-400 text-2xl mr-4"></i>
                                     <h4 class="text-lg font-semibold">Riesgo Estratégico</h4>
@@ -61,7 +109,8 @@
                                 <p class="text-gray-300">Decisiones empresariales que afectan la capacidad de la empresa
                                     para alcanzar sus objetivos.</p>
                             </div>
-                            <div class="bg-slate-700 p-6 rounded-lg shadow-md">
+
+                            <div class="card bg-slate-700 p-6 rounded-lg shadow-md">
                                 <div class="flex items-center mb-4">
                                     <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl mr-4"></i>
                                     <h4 class="text-lg font-semibold">Riesgo Reputacional</h4>
@@ -69,6 +118,7 @@
                                 <p class="text-gray-300">Posibilidad de daño a la imagen y reputación de la empresa,
                                     afectando la confianza de los clientes e inversores.</p>
                             </div>
+
                         </div>
                     </section>
 

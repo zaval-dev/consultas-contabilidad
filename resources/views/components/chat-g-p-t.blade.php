@@ -28,7 +28,7 @@
                         @endphp
                         <option value="" hidden>Selecciona un rubro</option>
                         @foreach($rubros as $rubro)
-                            <option value="{{$rubro->detalle}}" {{ $rubro->id == $auth_user->rubro_id ? 'selected' : '' }}>{{$rubro->detalle}}</option>     
+                            <option value="{{$rubro->detalle}}" {{ $rubro->id == $auth_user->rubro_id ? 'selected' : '' }}>{{$rubro->detalle}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -65,7 +65,7 @@
 
     <div id="compose-modal" class="transform transition-all duration-500 fixed z-50 bottom-0 right-0 translate-y-full bg-white border border-gray-300 shadow-lg p-4 rounded-lg w-1/3 h-auto mr-4 dark:bg-gray-800 dark:border-gray-600 dark:shadow-gray-700">
         {{-- mr-4 mb-4 --}}
-        <div class="flex justify-between items-center"> 
+        <div class="flex justify-between items-center">
             <h3 class="text-lg font-semibold dark:text-white">Conoce a tu asistente, Arnie</h3>
             <button id="close-modal" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">&times;</button>
         </div>
@@ -90,7 +90,7 @@
                             @endphp
                             <option value="" hidden>Selecciona un rubro</option>
                             @foreach($rubros as $rubro)
-                                <option value="{{$rubro->detalle}}" {{ $rubro->id == $auth_user->rubro_id ? 'selected' : '' }}>{{$rubro->detalle}}</option>     
+                                <option value="{{$rubro->detalle}}" {{ $rubro->id == $auth_user->rubro_id ? 'selected' : '' }}>{{$rubro->detalle}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -108,16 +108,16 @@
                     </div>
                 </div>
                 <textarea id="query" rows="3" class="hidden w-full resize-none border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 placeholder-gray-400 text-gray-900 sm:leading-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-200" placeholder="Escribe tu consulta..."></textarea>
-    
+
                 <div class="flex justify-end">
                     <button id="send-btn" class="inline-flex items-center rounded-md bg-indigo-600 dark:bg-indigo-500 px-3 py-2 font-semibold text-white shadow-sm hover:bg-indigo-500 dark:hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-500">
                         Enviar
                     </button>
                 </div>
-    
+
                 <label for="response" class="sr-only">GPT Response</label>
                 <textarea id="response" rows="10" class="block w-full resize-none border border-gray-300 rounded-lg p-2 text-sm focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600  text-gray-900 sm:leading-6 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200 dark:placeholder-gray-400" readonly placeholder="La respuesta aparecerá aquí..."></textarea>
-            </div>            
+            </div>
         </div>
     </div>
 </div>
@@ -164,10 +164,10 @@
                 'Content-Type': 'application/json',
                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
-            body: JSON.stringify({ 
+            body: JSON.stringify({
                 rubro: rubro,
                 tema: tema,
-                query: query 
+                query: query
             })
         })
         .then(response => response.json())
@@ -190,9 +190,9 @@
         }else {
             if(TextQuery.classList.contains('hidden')) {
                 TextQuery.classList.remove('hidden');
-                divOptions.classList.add('hidden');  
+                divOptions.classList.add('hidden');
                 span.classList.remove('dark:text-gray-500');
-                span.classList.add('dark:text-gray-200'); 
+                span.classList.add('dark:text-gray-200');
             }
         }
     }
